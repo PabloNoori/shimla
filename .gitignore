@@ -1,2 +1,4 @@
-shimla/__pycache__
 db.sqlite3
+shimla/__pycache__
+home/__pycache__/
+home/migrations/__pycache__/
