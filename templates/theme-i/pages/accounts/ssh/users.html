@@ -1,6 +1,31 @@
 {% extends 'theme-i/base.html' %}
+{% load static %}
 {% block title %}SSH users{% endblock %}
-
 {% block content %}
 <h1>SSH users</h1>
+<table style="width:100%">
+    <tr>
+        <th>Users</th>
+        <th>Password</th>
+        <th>Delete</th>
+    </tr>
+    <tr>
+        <td>Emil</td>
+        <td>Tobias</td>
+        <td>
+            <a href="#">
+                <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>14</td>
+        <td>
+            <a href="#">
+                <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
+            </a>
+        </td>
+    </tr>
+</table>
 {% endblock %}

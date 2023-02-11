@@ -1,0 +1,37 @@
+:root {
+    --color0: yellowgreen;
+    --color1: #0d1117;
+    --color2: #161b22;
+    --color3: #768a8b;
+    --txt-a: var(--color0);
+    --txt-b: var(--color3);
+    --bg-a: var(--color1);
+    --bg-b: var(--color2);
+    --br-a: var(--color0);
+    --br-b: var(--color3);
+}
+
+body {
+    background-color: var(--bg-a);
+    color: var(--txt-b);
+}
+
+h1{
+    color: var(--br-a);
+}
+
+table{
+    background-color: var(--bg-b);
+    color: var(--txt-b);
+}
+
+
+th,td {
+    border-bottom: 1px solid var(--br-b);
+    text-align: center;
+    padding: 10px;
+}
+
+.icon{
+    width: 30px;
+}

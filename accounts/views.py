@@ -4,6 +4,9 @@ import crypt
 
 # Create your views here.
 
+def group_view(request):
+    return render(request, 'theme-i/pages/accounts/group.html')
+
 def ssh_users_view(request):
     return render(request, 'theme-i/pages/accounts/ssh/users.html')
 
