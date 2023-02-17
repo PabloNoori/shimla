@@ -1,14 +1,18 @@
 from django.shortcuts import render
+from . import models
 import os
 import crypt
 
 # Create your views here.
 
 def group_view(request):
-    return render(request, 'theme-i/pages/accounts/group.html')
+    return render(request, 'theme-i/pages/accounts/accounts.html')
 
 def ssh_users_view(request):
-    return render(request, 'theme-i/pages/accounts/ssh/users.html')
+    context = {
+        'ssh_accounts': models.SSH_accounts.objects.all()
+    }
+    return render(request, 'theme-i/pages/accounts/ssh/users.html', context=context)
 
 def ssh_create_view(request):
     password = "p@ssw0rd"

@@ -7,25 +7,22 @@
     <tr>
         <th>Users</th>
         <th>Password</th>
+        {% comment %}
         <th>Delete</th>
+        {% endcomment %}
     </tr>
+    {% for data in ssh_accounts %}
     <tr>
-        <td>Emil</td>
-        <td>Tobias</td>
+        <td>{{ data.username }}</td>
+        <td>{{ data.password }}</td>
+        {% comment %}
         <td>
             <a href="#">
                 <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
             </a>
         </td>
+        {% endcomment %}
     </tr>
-    <tr>
-        <td>16</td>
-        <td>14</td>
-        <td>
-            <a href="#">
-                <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
-            </a>
-        </td>
-    </tr>
+    {% endfor %}
 </table>
 {% endblock %}

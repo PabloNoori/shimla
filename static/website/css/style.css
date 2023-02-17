@@ -32,6 +32,16 @@ th,td {
     padding: 10px;
 }
 
+a{
+    color: var(--txt-b);
+    text-decoration: none;
+}
+
 .icon{
     width: 30px;
+}
+
+.accounts-link a{
+    border: 1px solid;
+    padding: 10px;
 }

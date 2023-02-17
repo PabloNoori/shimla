@@ -1,6 +1,8 @@
 {% extends 'theme-i/base.html' %}
 {% block title %}Group{% endblock %}
 {% block content %}
-<h1>Group</h1>
-
+<h1>Accounts</h1>
+<div class="accounts-link">
+    <a href="{% url 'accounts:ssh' %}">SSH</a>
+</div>
 {% endblock %}

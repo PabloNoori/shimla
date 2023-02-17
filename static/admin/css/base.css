@@ -6,15 +6,15 @@
 
 /* VARIABLE DEFINITIONS */
 :root {
-  --primary: #79aec8;
+  --primary: #264b5d;
   --secondary: #417690;
   --accent: #f5dd5d;
-  --primary-fg: #fff;
+  --primary-fg: #eee;
 
-  --body-fg: #333;
-  --body-bg: #fff;
-  --body-quiet-color: #666;
-  --body-loud-color: #000;
+  --body-fg: #eeeeee;
+  --body-bg: #121212;
+  --body-quiet-color: #e0e0e0;
+  --body-loud-color: #ffffff;
 
   --header-color: #ffc;
   --header-branding-color: var(--accent);
@@ -25,30 +25,30 @@
   --breadcrumbs-link-fg: var(--body-bg);
   --breadcrumbs-bg: var(--primary);
 
-  --link-fg: #447e9b;
-  --link-hover-color: #036;
-  --link-selected-fg: #5b80b2;
+  --link-fg: #81d4fa;
+  --link-hover-color: #4ac1f7;
+  --link-selected-fg: #6f94c6;
 
-  --hairline-color: #e8e8e8;
-  --border-color: #ccc;
+  --hairline-color: #272727;
+  --border-color: #020101;
 
-  --error-fg: #ba2121;
+  --error-fg: #e35f5f;
 
-  --message-success-bg: #dfd;
-  --message-warning-bg: #ffc;
-  --message-error-bg: #ffefef;
+  --message-success-bg: #006b1b;
+  --message-warning-bg: #583305;
+  --message-error-bg: #570808;
 
-  --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-  --selected-bg: #e4e4e4; /* E.g. selected table cells */
-  --selected-row: #ffc;
+  --darkened-bg: #212121; /* A bit darker than --body-bg */
+  --selected-bg: #1b1b1b; /* E.g. selected table cells */
+  --selected-row: #00363a;
 
   --button-fg: #fff;
   --button-bg: var(--primary);
   --button-hover-bg: #609ab6;
   --default-button-bg: var(--secondary);
   --default-button-hover-bg: #205067;
-  --close-button-bg: #888; /* Previously #bbb, contrast 1.92 */
-  --close-button-hover-bg: #747474;
+  --close-button-bg: #333333; /* Previously #bbb, contrast 1.92 */
+  --close-button-hover-bg: #666666;
   --delete-button-bg: #ba2121;
   --delete-button-hover-bg: #a41515;
 
@@ -75,7 +75,7 @@
     --link-selected-fg: #6f94c6;
 
     --hairline-color: #272727;
-    --border-color: #353535;
+    --border-color: #020101;
 
     --error-fg: #e35f5f;
     --message-success-bg: #006b1b;
