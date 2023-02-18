@@ -1,0 +1,19 @@
+{% extends 'theme-i/base.html' %}
+{% block title %}Create SSH Account{% endblock %}
+{% block content %}
+<h1>Create SSH Account</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    {{ field.errors }}
+    {{ field.label_tag }} 
+    <br>
+    {{ field }}
+    {% if field.help_text %}
+    <p class="help">{{ field.help_text|safe }}</p>
+    {% endif %}
+    <br><br>
+    {% endfor %}
+    <input class="submit" type="submit" value="Create">
+</form>
+{% endblock %}

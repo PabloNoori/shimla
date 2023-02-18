@@ -3,37 +3,32 @@
     --color1: #0d1117;
     --color2: #161b22;
     --color3: #768a8b;
-    --txt-a: var(--color0);
-    --txt-b: var(--color3);
-    --bg-a: var(--color1);
-    --bg-b: var(--color2);
-    --br-a: var(--color0);
-    --br-b: var(--color3);
+    --color4: #ff4454;
 }
 
 body {
-    background-color: var(--bg-a);
-    color: var(--txt-b);
+    background-color: var(--color1);
+    color: var(--color3);
 }
 
 h1{
-    color: var(--br-a);
+    color: var(--color0);
 }
 
 table{
-    background-color: var(--bg-b);
-    color: var(--txt-b);
+    background-color: var(--color2);
+    color: var(--color3);
 }
 
 
 th,td {
-    border-bottom: 1px solid var(--br-b);
+    border-bottom: 1px solid var(--color3);
     text-align: center;
     padding: 10px;
 }
 
 a{
-    color: var(--txt-b);
+    color: var(--color3);
     text-decoration: none;
 }
 
@@ -43,5 +38,31 @@ a{
 
 .accounts-link a{
     border: 1px solid;
+    padding: 10px;
+}
+
+.btn .add{
+    border: 1px solid;
+    padding: 10px;
+}
+
+
+.errorlist li{
+    color: var(--color4);
+}
+
+/* ----- forms ----- */
+
+form input{
+    border: 1px solid;
+    background-color: var(--color2);
+    color: var(--color3);
+    padding: 10px;
+}
+
+form .submit{
+    border: 1px solid;
+    background-color: var(--color0);
+    color: var(--color1);
     padding: 10px;
 }

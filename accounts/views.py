@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import models
+from . import forms
 import os
 import crypt
 
@@ -15,10 +16,19 @@ def ssh_users_view(request):
     return render(request, 'theme-i/pages/accounts/ssh/users.html', context=context)
 
 def ssh_create_view(request):
-    password = "p@ssw0rd"
-    encPass = crypt.crypt(password, "22")
-    os.system("useradd -p "+encPass+" alii")
-    return render(request, 'theme-i/pages/home.html')
+    form = forms.SSHForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        ucrypt=crypt.crypt(password,"123")
+        os.system("sudo useradd -p {} -m {}".format(ucrypt, username))
+        return redirect('accounts:ssh')
+    
+    context = {
+        'form': form
+    }
+    return render(request, 'theme-i/pages/accounts/ssh/create.html', context=context)
 
 def ssh_delete_view(request):
     os.system("userdel alii")

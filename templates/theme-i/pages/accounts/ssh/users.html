@@ -3,26 +3,32 @@
 {% block title %}SSH users{% endblock %}
 {% block content %}
 <h1>SSH users</h1>
-<table style="width:100%">
-    <tr>
-        <th>Users</th>
-        <th>Password</th>
-        {% comment %}
-        <th>Delete</th>
-        {% endcomment %}
-    </tr>
-    {% for data in ssh_accounts %}
-    <tr>
-        <td>{{ data.username }}</td>
-        <td>{{ data.password }}</td>
-        {% comment %}
-        <td>
-            <a href="#">
-                <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
-            </a>
-        </td>
-        {% endcomment %}
-    </tr>
-    {% endfor %}
-</table>
+<div class="btn">
+    <a class="add" href="{% url 'accounts:ssh_create' %}">+</a>
+</div>
+<br>
+<div>
+    <table style="width:100%">
+        <tr>
+            <th>Users</th>
+            <th>Password</th>
+            {% comment %}
+            <th>Delete</th>
+            {% endcomment %}
+        </tr>
+        {% for data in ssh_accounts %}
+        <tr>
+            <td>{{ data.username }}</td>
+            <td>{{ data.password }}</td>
+            {% comment %}
+            <td>
+                <a href="#">
+                    <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
+                </a>
+            </td>
+            {% endcomment %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 {% endblock %}
