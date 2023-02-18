@@ -12,21 +12,17 @@
         <tr>
             <th>Users</th>
             <th>Password</th>
-            {% comment %}
             <th>Delete</th>
-            {% endcomment %}
         </tr>
         {% for data in ssh_accounts %}
         <tr>
             <td>{{ data.username }}</td>
             <td>{{ data.password }}</td>
-            {% comment %}
             <td>
-                <a href="#">
+                <a href="{% url 'accounts:ssh_delete' pk=data.pk %}">
                     <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
                 </a>
             </td>
-            {% endcomment %}
         </tr>
         {% endfor %}
     </table>
