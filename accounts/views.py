@@ -13,7 +13,8 @@ def group_view(request):
 def ssh_users_view(request):
     context = {
         'ssh_accounts': models.SSH_accounts.objects.all(),
-        'check_root': plugins.check_root()
+        'check_root': plugins.check_root(),
+        'is_linux': plugins.is_linux()
     }
     return render(request, 'theme-i/pages/accounts/ssh/users.html', context=context)
 
