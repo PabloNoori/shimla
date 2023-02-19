@@ -1,5 +1,7 @@
 # Shimla, a multi-user ssh graphical management panel
 
+## How to install shimla on server ?
+
 ```
 cd /root/
 ```
@@ -24,6 +26,16 @@ python3 manage.py makemigrations
 
 ```
 python3 manage.py migrate
+```
+
+```
+python3 manage.py runserver 0.0.0.0:9999
+```
+
+## How to run shimla on server ?
+
+```
+cd /root/shimla
 ```
 
 ```
