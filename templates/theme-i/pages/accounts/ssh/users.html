@@ -4,7 +4,11 @@
 {% block content %}
 <h1>SSH users</h1>
 <div class="btn">
+    {% if check_root %}
     <a class="add" href="{% url 'accounts:ssh_create' %}">+</a>
+    {% else %}
+    <a class="add" href="#" onclick="alert('Requires root access')">+</a>
+    {% endif %}
 </div>
 <br>
 <div>
@@ -19,12 +23,40 @@
             <td>{{ data.username }}</td>
             <td>{{ data.password }}</td>
             <td>
+                {% if check_root %}
                 <a href="{% url 'accounts:ssh_delete' pk=data.pk %}">
                     <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
                 </a>
+                {% else %}
+                <a href="#" onclick="alert('Requires root access')">
+                    <img class="icon" src="{% static 'global/images/delete.png' %}" alt="delete">
+                </a>
+                {% endif %}
             </td>
         </tr>
         {% endfor %}
     </table>
+</div>
+<h1>SSH status</h1>
+<br>
+<div class="state">
+    <div class="group">
+        {% if check_root %}
+        <img class="icon" src="{% static 'global/images/ok.png' %}" alt="ok">
+        <div>Root</div>
+        {% else %}
+        <img class="icon" src="{% static 'global/images/problem.png' %}" alt="probelm">
+        <div>Not root access</div>
+        {% endif %}
+    </div>
+    <div class="group">
+        {% if is_linux %}
+        <img class="icon" src="{% static 'global/images/ok.png' %}" alt="ok">
+        <div>Linux</div>
+        {% else %}
+        <img class="icon" src="{% static 'global/images/problem.png' %}" alt="probelm">
+        <div>Your operating system is not Linux</div>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

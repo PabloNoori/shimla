@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . import models
 from . import forms
+from . import plugins
 import os
 import crypt
 
@@ -11,7 +12,8 @@ def group_view(request):
 
 def ssh_users_view(request):
     context = {
-        'ssh_accounts': models.SSH_accounts.objects.all()
+        'ssh_accounts': models.SSH_accounts.objects.all(),
+        'check_root': plugins.check_root()
     }
     return render(request, 'theme-i/pages/accounts/ssh/users.html', context=context)
 
@@ -22,7 +24,7 @@ def ssh_create_view(request):
         username = form.cleaned_data['username']
         password = form.cleaned_data['password']
         ucrypt=crypt.crypt(password,"123")
-        os.system("sudo useradd -p {} -m {}".format(ucrypt, username))
+        os.system("sudo useradd -p {} -m {} -s /bin/true".format(ucrypt, username))
         return redirect('accounts:ssh')
     
     context = {

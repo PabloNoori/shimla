@@ -66,3 +66,12 @@ form .submit{
     color: var(--color1);
     padding: 10px;
 }
+
+
+/* ----- state ----- */
+.state .group{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
