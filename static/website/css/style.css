@@ -67,6 +67,23 @@ form .submit{
     padding: 10px;
 }
 
+/* ----- check Online ----- */
+
+.check-online{
+    width: 15px;
+    height: 15px;
+    margin: 2px auto;
+    border-radius: 50%;
+}
+
+.check-online.on{
+    background-color: #08db83;
+}
+
+.check-online.off{
+    background-color: #ff574f;
+}
+
 
 /* ----- status ----- */
 .status .group{
