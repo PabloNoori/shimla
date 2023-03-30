@@ -68,8 +68,8 @@ form .submit{
 }
 
 
-/* ----- state ----- */
-.state .group{
+/* ----- status ----- */
+.status .group{
     display: flex;
     align-items: center;
     gap: 6px;

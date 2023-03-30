@@ -6,3 +6,4 @@ accounts/__pycache__/
 accounts/migrations/__pycache__/
 accounts/migrations/*
 !accounts/migrations/__init__.py
+accounts/templatetags/__pycache__/

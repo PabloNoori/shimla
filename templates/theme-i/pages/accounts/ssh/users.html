@@ -1,5 +1,6 @@
 {% extends 'theme-i/base.html' %}
 {% load static %}
+{% load ssh_extras %}
 {% block title %}SSH users{% endblock %}
 {% block content %}
 <h1>SSH users</h1>
@@ -16,12 +17,22 @@
         <tr>
             <th>Users</th>
             <th>Password</th>
+            <th>Online</th>
             <th>Delete</th>
         </tr>
         {% for data in ssh_accounts %}
         <tr>
             <td>{{ data.username }}</td>
             <td>{{ data.password }}</td>
+            <td>
+                {% if data.username|check_online %}
+                <div class="check-online on"></div>
+                {% else %}
+                <div class="circle">
+                    <div class="check-online off"></div>
+                </div>
+                {% endif %}
+            </td>
             <td>
                 {% if check_root %}
                 <a href="{% url 'accounts:ssh_delete' pk=data.pk %}">
@@ -39,7 +50,7 @@
 </div>
 <h1>SSH status</h1>
 <br>
-<div class="state">
+<div class="status">
     <div class="group">
         {% if check_root %}
         <img class="icon" src="{% static 'global/images/ok.png' %}" alt="ok">
