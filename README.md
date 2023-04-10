@@ -81,26 +81,3 @@ cd /root/shimla
 ```
 python manage.py changepassword <user_name>
 ```
-
-
-## How to Run Django Server Always ?
-
-```
-chmod +x add_my_service.sh
-```
-
-```
-./add_my_service.sh
-```
-
-```
-sudo systemctl start shimla
-```
-
-```
-sudo systemctl status shimla
-```
-
-```
-sudo systemctl enable shimla
-```
