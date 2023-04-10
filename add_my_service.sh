@@ -8,8 +8,8 @@ Description=My Django Project
 After=network.target
 
 [Service]
-User=myuser
-Group=mygroup
+User=root
+Group=root
 WorkingDirectory=$project_dir
 ExecStart=/usr/bin/python3 $project_dir/manage.py runserver 0.0.0.0:7077
 Restart=always

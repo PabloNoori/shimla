@@ -95,6 +95,12 @@ chmod +x add_my_service.sh
 
 ```
 sudo systemctl start shimla
+```
+
+```
 sudo systemctl status shimla
+```
+
+```
 sudo systemctl enable shimla
 ```
