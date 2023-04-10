@@ -37,6 +37,10 @@ python3 manage.py migrate
 ```
 
 ```
+python3 manage.py createsuperuser
+```
+
+```
 sudo python3 manage.py runserver 0.0.0.0:7077
 ```
 
@@ -66,6 +70,16 @@ python3 manage.py makemigrations
 
 ```
 python3 manage.py migrate
+```
+
+## How to reset shimla admin password?
+
+```
+cd /root/shimla
+```
+
+```
+python manage.py changepassword <user_name>
 ```
 
 
