@@ -50,6 +50,24 @@ cd /root/shimla
 sudo python3 manage.py runserver 0.0.0.0:7077
 ```
 
+## How to update a Shimla project?
+
+```
+cd /root/shimla
+```
+
+```
+git pull
+```
+
+```
+python3 manage.py makemigrations
+```
+
+```
+python3 manage.py migrate
+```
+
 
 ## How to Run Django Server Always ?
 
@@ -61,9 +79,8 @@ chmod +x add_my_service.sh
 ./add_my_service.sh
 ```
 
-Test
-
 ```
 sudo systemctl start shimla
+sudo systemctl status shimla
 sudo systemctl enable shimla
 ```
